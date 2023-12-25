@@ -1,0 +1,20 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, @HttpContextAccessor.HttpContext?.Session.GetString("Username")</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="text-center">
+    <input type="button" id="joinGroup" value="Join Private Group"/>
+</div>
+<div style="height:10px">
+  
+</div>
+<div class="text-center">
+    <input type="button" id="removeGroup" value="Remote From Private Group" />
+</div>
+
+
